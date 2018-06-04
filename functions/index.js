@@ -50,7 +50,7 @@ function updateCurrentDataFirebase(data) {
 function updateRunningTotals(data) {
   const ref = db.ref(`/latest_readings/${data.deviceId}`)
   const currentTime = new Date()
-  const cutoff = currentTime - (24 * 60 * 60 * 1000)
+  const cutoff = (currentTime - (24 * 60 * 60 * 1000))/1000
   const oldItemsQuery = ref.orderByChild('timestamp').endAt(cutoff)
 
   // Set new data
