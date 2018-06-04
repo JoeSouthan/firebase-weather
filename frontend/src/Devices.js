@@ -20,7 +20,9 @@ export default class Devices extends Component {
 
   render() {
     if (this.state.loading) {
-      return "Loading..."
+      return (
+        <div className="is-light-grey">Loading...</div>
+      )
     } else {
       return Object.entries(this.state.devices).map((device) => (
         <Device key={device[0]} name={device[0]} data={device[1]} />

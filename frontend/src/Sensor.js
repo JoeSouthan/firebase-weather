@@ -1,20 +1,17 @@
-import React from 'react'
+import React from "react"
+import Card from "./Card"
 
 const Sensor = ({ data, unit, description }) => (
   <div className="column">
-    <div className="card">
-      <div className="card-content">
-        <div className="content">
-          <div className="">
-            {description}
-          </div>
-          <div className="title">
-            {data}
-            <span className="subtitle">{unit}</span>
-          </div>
-        </div>
+    <Card>
+      <div className="">
+        {description}
       </div>
-    </div>
+      <div className="title">
+        {data}
+        <span className="subtitle">{unit}</span>
+      </div>
+    </Card>
   </div>
 )
 
